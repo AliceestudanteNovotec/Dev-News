@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Instalação e Configuração do XAMPP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <h1>Dev Notícias</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="noticia.html">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li>
+          <a href="#">Temas</a>
+          <ul class="submenu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">PHP</a></li>
+            <li><a href="#">Banco de Dados</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contatos</a>
+          <ul class="contatos">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Twitter(X)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="container">
+        <div class="seguranca-de-dados">
+            <h2>1. Instalar o XAMPP</h2>
+            <ol>
+                <li><strong>Baixar o XAMPP:</strong>
+                    <ul>
+                        <li>Acesse o site oficial do XAMPP: <a href="https://www.apachefriends.org/index.html" target="_blank">Apache Friends</a>.</li>
+                        <li>Clique no botão de download para a versão apropriada do seu sistema operacional (Windows, macOS, ou Linux).</li>
+                    </ul>
+                </li>
+                <li><strong>Instalar o XAMPP:</strong>
+                    <ul>
+                        <li>Execute o arquivo de instalação que você baixou.</li>
+                        <li>Siga as instruções do assistente de instalação. Você pode optar por instalar todos os componentes ou apenas os necessários (Apache e MySQL são os essenciais).</li>
+                    </ul>
+                </li>
+                <li><strong>Iniciar o XAMPP:</strong>
+                    <ul>
+                        <li>Abra o XAMPP Control Panel.</li>
+                        <li>Clique em "Start" ao lado dos serviços "Apache" e "MySQL" para iniciar o servidor web e o banco de dados local.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="banco-dados">
+            <h2>2. Configurar o XAMPP</h2>
+            <ol>
+                <li><strong>Verificar se o Apache e MySQL estão funcionando:</strong>
+                    <ul>
+                        <li>Abra seu navegador e digite <code>http://localhost</code> na barra de endereços. Você deve ver a página inicial do XAMPP, confirmando que o Apache está funcionando.</li>
+                    </ul>
+                </li>
+                <li><strong>Acessar o phpMyAdmin:</strong>
+                    <ul>
+                        <li>No navegador, digite <code>http://localhost/phpmyadmin</code> e pressione Enter. Isso abrirá o phpMyAdmin, uma interface gráfica para gerenciar bancos de dados MySQL.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>3. Criar um Banco de Dados</h2>
+            <ol>
+                <li><strong>Criar um novo banco de dados:</strong>
+                    <ul>
+                        <li>No phpMyAdmin, clique na aba "Databases" (ou "Bases de Dados").</li>
+                        <li>No campo "Database name" (ou "Nome do banco de dados"), digite o nome do banco de dados, por exemplo, <code>vendas_noivas</code>.</li>
+                        <li>Clique no botão "Create" (ou "Criar").</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>4. Criar uma Tabela</h2>
+            <ol>
+                <li><strong>Selecionar o banco de dados:</strong>
+                    <ul>
+                        <li>Clique no nome do banco de dados <code>vendas_noivas</code> na lista à esquerda.</li>
+                    </ul>
+                </li>
+                <li><strong>Criar uma nova tabela:</strong>
+                    <ul>
+                        <li>Na seção "Create table" (ou "Criar tabela"), digite o nome da tabela, por exemplo, <code>vestidos</code>.</li>
+                        <li>Defina o número de colunas, por exemplo, 3, e clique em "Go" (ou "Ir").</li>
+                    </ul>
+                </li>
+                <li><strong>Definir a estrutura da tabela:</strong>
+                    <ul>
+                        <li>Preencha os campos da tabela como segue:
+                            <ul>
+                                <li><strong>Coluna 1:</strong>
+                                    <ul>
+                                        <li><code>Name</code>: <code>id</code></li>
+                                        <li><code>Type</code>: <code>INT</code></li>
+                                        <li><code>Length/Values</code>: (deixe em branco ou defina como 11)</li>
+                                        <li><code>Index</code>: <code>PRIMARY</code></li>
+                                        <li><code>A_I</code> (Auto Incremento): Marque essa caixa para que o <code>id</code> seja gerado automaticamente.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Coluna 2:</strong>
+                                    <ul>
+                                        <li><code>Name</code>: <code>cor</code></li>
+                                        <li><code>Type</code>: <code>VARCHAR</code></li>
+                                        <li><code>Length/Values</code>: <code>50</code> (ou o comprimento desejado)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Coluna 3:</strong>
+                                    <ul>
+                                        <li><code>Name</code>: <code>tamanho</code></li>
+                                        <li><code>Type</code>: <code>VARCHAR</code></li>
+                                        <li><code>Length/Values</code>: <code>10</code> (ou o comprimento desejado)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Após preencher todos os campos, clique em "Save" (ou "Salvar").</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h2>5. Confirmar a Criação da Tabela</h2>
+            <ul>
+                <li>Sua tabela <code>vestidos</code> deve agora aparecer na lista de tabelas dentro do banco de dados <code>vendas_noivas</code>. Você pode começar a adicionar e gerenciar dados clicando em "Browse" (ou "Navegar") para visualizar ou em "Insert" (ou "Inserir") para adicionar novos registros.</li>
+            </ul>
+
+            <div class="tabela">
+                <h2>Tabela de Vestidos de Noiva</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cor</th>
+                            <th>Tamanho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Branco</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Creme</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Champagne</td>
+                            <td>42</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tutorial XAMPP. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
